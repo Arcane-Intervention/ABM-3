@@ -114,8 +114,8 @@ hash = "53176518f7e22fa6079a6cbdafcc29e6a6f82e47b9e9dbfa07dd0e6d28a3ca38"
 metafile = true
 
 [[files]]
-file = "mods/better-advancements.pw.toml"
-hash = "b3432cff710fe8e143ee46498453074e8195c3d24c711e4812988d7272112924"
+file = "mods/better-advanced-tooltips.pw.toml"
+hash = "b0e43a45dea97121e8a09e1c90d1da5ecf9a6455cc0ec8a89777a2e51547d561"
 metafile = true
 
 [[files]]
@@ -176,11 +176,6 @@ metafile = true
 [[files]]
 file = "mods/distanthorizons.pw.toml"
 hash = "487462f4cacbac76fced81c75621037f949a5ba539fde615c6a4bce43963d1d5"
-metafile = true
-
-[[files]]
-file = "mods/distanthorizonsapi.pw.toml"
-hash = "9a4ebfe46ee625c7a75782a0e44618dc50dd6212266cf86c0356eb67b5a2fc4f"
 metafile = true
 
 [[files]]
@@ -284,6 +279,11 @@ hash = "5612e93a633e577362cb18efd27de0ea3a51e6444a96475c9aec36e3c1cba83f"
 metafile = true
 
 [[files]]
+file = "mods/iceberg.pw.toml"
+hash = "4c40bdb11803e0774e32f0e4b8c2b8975712b4cabbd2ae8d2e145526f46431c1"
+metafile = true
+
+[[files]]
 file = "mods/iris.pw.toml"
 hash = "c8679fb2e8557214c8c04177712832443c69fa44b791a319c51f7eff39006e17"
 metafile = true
@@ -316,11 +316,6 @@ metafile = true
 [[files]]
 file = "mods/lambdynamiclights.pw.toml"
 hash = "6a34c0b44a9f0a4ebbb04ae8af6cf86c2fce28353935226852d439c14e635f33"
-metafile = true
-
-[[files]]
-file = "mods/legendary-tooltips.pw.toml"
-hash = "b384b44e6513120830e094e6b3ed956c243d57e32ec5984fd83ddc6a59dd7f03"
 metafile = true
 
 [[files]]
@@ -484,6 +479,11 @@ hash = "e168a1be9b6a14d0a2c8855240cbf68e3186ab63665860e4ccf2947c849815a7"
 metafile = true
 
 [[files]]
+file = "mods/rhino.pw.toml"
+hash = "673de9cae75d2ad02796368939384de0d7238cf5c782975d71848a2187f753e7"
+metafile = true
+
+[[files]]
 file = "mods/runelic.pw.toml"
 hash = "0e9ced151b2bab57667d3037815dd702ca0886f6928af499c49151f1714c093b"
 metafile = true
@@ -571,6 +571,11 @@ metafile = true
 [[files]]
 file = "mods/tectonic.pw.toml"
 hash = "e8af3a69da1e570fb2860adc57eb882b0b510661c466b29cd2941dad21b35cf1"
+metafile = true
+
+[[files]]
+file = "mods/terrablender.pw.toml"
+hash = "435edf17484084adf2b3bc928b5995cb757d2e7c7a9ffc9e0bd16c114cd2b691"
 metafile = true
 
 [[files]]

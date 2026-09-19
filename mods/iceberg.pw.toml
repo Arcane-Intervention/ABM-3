@@ -1,0 +1,13 @@
+name = "Iceberg"
+filename = "Iceberg-26.1.2-neoforge-1.4.1.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/5faXoLqX/versions/B9LQCpQ3/Iceberg-26.1.2-neoforge-1.4.1.1.jar"
+hash-format = "sha512"
+hash = "5ec2651a66ec315b45458d7d771461cee4b1ebd0be00cee013801e38bc98f53397b8f71ac6f31318e606465bea1870e31f001fe8e1f5ef3bec63bf3b19d4a354"
+
+[update]
+[update.modrinth]
+mod-id = "5faXoLqX"
+version = "B9LQCpQ3"
