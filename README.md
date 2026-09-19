@@ -5,7 +5,7 @@ Anxiety Bois Modpack 3 private development repo
 Current development targets 26.1.2, but 26.2 or 26.3 should be considered viable options depending on the direction the modding comunity follows.
 
 ## Critical Mods
-These are mods with which the pack as envisioned is not viable:
+These are mods without which the pack as envisioned is not viable:
 
 ### Aether II
 Intent is to set Aether II's spawn_in_aether = true and gate early progression around ore spawns on/around spawn
@@ -18,3 +18,8 @@ Envisioned as core tool progression
 
 ### TBD Questing Mod
 
+## Packwiz for mod versioning
+https://github.com/packwiz/packwiz will be used to generate final mod manifests for modrinth/curseforge.
+
+## Server/Client Handling
+TBD - considering separate "Server" branch, feedback welcome.

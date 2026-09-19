@@ -1,0 +1,13 @@
+name = "YUNG's Menu Tweaks"
+filename = "YungsMenuTweaks-26.1.2-NeoForge-3.1.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/Hcy2DFKF/versions/T9GFQbib/YungsMenuTweaks-26.1.2-NeoForge-3.1.0.jar"
+hash-format = "sha512"
+hash = "03f0d8f505aba8ea46bc540cb31a6d324d44f2a294d3373b5c5bfd9a45a868b2cb10c1b7d8dc3946dfce6aa5ef38e5d52a0e24533cc5db60cfbb1a036d89498a"
+
+[update]
+[update.modrinth]
+mod-id = "Hcy2DFKF"
+version = "T9GFQbib"

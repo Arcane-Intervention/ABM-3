@@ -1,0 +1,13 @@
+name = "Applied Energistics 2"
+filename = "appliedenergistics2-26.1.12-beta.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/XxWD5pD3/versions/NLfXQFbp/appliedenergistics2-26.1.12-beta.jar"
+hash-format = "sha512"
+hash = "36a9f825ccc777127ccc40d53ed13395930a9de8a60675715e47bd8fed9023ff03a6e5eeef25aa494d4bf8c8083b68849563b79787fc9e5619c3c425464d38d3"
+
+[update]
+[update.modrinth]
+mod-id = "XxWD5pD3"
+version = "NLfXQFbp"

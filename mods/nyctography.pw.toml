@@ -1,0 +1,13 @@
+name = "Nyctography"
+filename = "Nyctography-neoforge-MC26.1.2-26.1.2.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/ViRnT7xw/versions/WZSvnrn3/Nyctography-neoforge-MC26.1.2-26.1.2.3.jar"
+hash-format = "sha512"
+hash = "f279670cba998ddc5da89e393a5658f71d36023930abc690054d8cde06a8cd31920ffc508511a821447d6f37e1ecd4d4a03206052191bd4535c149deb46bbaec"
+
+[update]
+[update.modrinth]
+mod-id = "ViRnT7xw"
+version = "WZSvnrn3"

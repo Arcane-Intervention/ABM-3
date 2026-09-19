@@ -1,0 +1,13 @@
+name = "Runelic"
+filename = "Runelic-neoforge-MC26.1.2-26.1.2.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/P4Xi5huA/versions/nJmcA6Sr/Runelic-neoforge-MC26.1.2-26.1.2.3.jar"
+hash-format = "sha512"
+hash = "86737babb028ae6f4dea088e5e0e4a3e8994ef85e661fd4a91b5135039e4756b600934bdb76c3f4bb06c8e967c8846d2e66102db60fc3ca0e0fdd99e249f4b16"
+
+[update]
+[update.modrinth]
+mod-id = "P4Xi5huA"
+version = "nJmcA6Sr"

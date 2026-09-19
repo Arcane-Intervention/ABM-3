@@ -1,0 +1,13 @@
+name = "Pig Pen Cipher"
+filename = "PigPen-neoforge-MC26.1.2-26.1.2.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/2xZPITh8/versions/WwdQ7LIM/PigPen-neoforge-MC26.1.2-26.1.2.4.jar"
+hash-format = "sha512"
+hash = "ceefae149a7cb1064de0323cd9f5781e60905dddd0cfda768ea52a2ae177d09b721818557d5c27a6b818204b13e58c07258c4169368215d37608553879f986b1"
+
+[update]
+[update.modrinth]
+mod-id = "2xZPITh8"
+version = "WwdQ7LIM"

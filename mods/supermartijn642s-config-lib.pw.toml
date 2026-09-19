@@ -1,0 +1,13 @@
+name = "SuperMartijn642's Config Lib"
+filename = "supermartijn642configlib-1.1.8-neoforge-mc26.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/LN9BxssP/versions/gD2yQaPN/supermartijn642configlib-1.1.8-neoforge-mc26.1.jar"
+hash-format = "sha512"
+hash = "018e694d07217e4f597f7d3895038bb3327fe373d639ee87a4ce7e9b32e8bf4f37d3fc022851eba9e605285fc063164ebca62a8efc4afa49842cf2a4157d1e9e"
+
+[update]
+[update.modrinth]
+mod-id = "LN9BxssP"
+version = "gD2yQaPN"

@@ -1,0 +1,13 @@
+name = "Curios API"
+filename = "curios-neoforge-15.0.0+26.1.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/vvuO3ImH/versions/dRnRThvD/curios-neoforge-15.0.0%2B26.1.2.jar"
+hash-format = "sha512"
+hash = "0b1a79e78e74e1fd45fe70264ac69329432199ea9e21dfae01a3435b5da8b153b4b218276091b2fa82de6cf40a42273af2b2cbc84667b3b5de2f9c932b4551db"
+
+[update]
+[update.modrinth]
+mod-id = "vvuO3ImH"
+version = "dRnRThvD"

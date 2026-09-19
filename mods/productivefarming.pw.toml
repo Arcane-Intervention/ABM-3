@@ -1,0 +1,13 @@
+name = "Productive Farming"
+filename = "productivefarming-26.1.2-0.12.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "c87c4f1e93e00cbcb52a955e2bfc535bb396a87d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8840697
+project-id = 944463

@@ -1,0 +1,13 @@
+name = "Athena"
+filename = "athena-4.7.3.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/b1ZV3DIJ/versions/8KRMFzZ7/athena-4.7.3.jar"
+hash-format = "sha512"
+hash = "e6ef87c4eb09d36ee95584ddd94c003921fb70b7c8990b7ccbba53f7fe5a0a71ed54ed81ac857676358cbbe0639065ee7e2633cdef0ddf54ec2b8c2e7ca870bf"
+
+[update]
+[update.modrinth]
+mod-id = "b1ZV3DIJ"
+version = "8KRMFzZ7"

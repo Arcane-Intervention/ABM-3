@@ -1,0 +1,13 @@
+name = "MmmMmmMmmMmm"
+filename = "dummmmmmy-26.1.2-3.0.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Adega8YN/versions/nmUUS6Aa/dummmmmmy-26.1.2-3.0.1-neoforge.jar"
+hash-format = "sha512"
+hash = "a14bbcc7063593a2a7eb719509795a668ede62bbc3dddd85803f3ba63beaa06121833bbcb9a9122b49c69487b7e7e99f8551e3e512c2a528df6d9b020de4864b"
+
+[update]
+[update.modrinth]
+mod-id = "Adega8YN"
+version = "nmUUS6Aa"

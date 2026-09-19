@@ -1,0 +1,13 @@
+name = "Accelerated Decay"
+filename = "accelerated-decay-neoforge-26.1.2.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/laX5CckD/versions/BSBkvx2x/accelerated-decay-neoforge-26.1.2.4.jar"
+hash-format = "sha512"
+hash = "86c0416d70ceea99191a587a410ecd0a3f2f7748086ef8008abfced6216291c5b70700561feb5a1e9b2e6e538b5e389f69070765c26a076d2dd329cdd828363a"
+
+[update]
+[update.modrinth]
+mod-id = "laX5CckD"
+version = "BSBkvx2x"

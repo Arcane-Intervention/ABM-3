@@ -1,0 +1,13 @@
+name = "Agritech (AT2)"
+filename = "agritechtwo-2.2.2.4+neoforge-mc-26.1.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b854ecc9c51c209f6adf36cf0baed12bd84a6a8e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8763339
+project-id = 1485550

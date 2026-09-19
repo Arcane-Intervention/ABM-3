@@ -1,0 +1,13 @@
+name = "Fantasy's Furniture - Nordic"
+filename = "fantasyfurniture_nordic-26.1.7.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/DIHzMa8h/versions/jyE3q3hd/fantasyfurniture_nordic-26.1.7.jar"
+hash-format = "sha512"
+hash = "f66d483501a8080eda38b0a589927480e891a436cf8cfe88e0d94275e2dcd121041e3d2f8794b9fbb99839ba67251bf877ba066728b53ba8cc295d14a068126d"
+
+[update]
+[update.modrinth]
+mod-id = "DIHzMa8h"
+version = "jyE3q3hd"

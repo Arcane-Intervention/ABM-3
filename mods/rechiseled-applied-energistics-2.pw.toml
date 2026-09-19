@@ -1,0 +1,13 @@
+name = "Rechiseled: Applied Energistics 2"
+filename = "rechiseledae-1.0.1-neoforge-mc26.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/1Tpwnc5h/versions/ybi2wdmx/rechiseledae-1.0.1-neoforge-mc26.1.jar"
+hash-format = "sha512"
+hash = "1f3bf3b0f78585efc262e06b382d42fcdd1298aaa7d0c5ef64a12095873e70fdb3376faa876e83683a13f9252c173948c8d2a93fe6c125534fb0e14678353a90"
+
+[update]
+[update.modrinth]
+mod-id = "1Tpwnc5h"
+version = "ybi2wdmx"

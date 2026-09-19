@@ -1,0 +1,13 @@
+name = "Puzzles Lib"
+filename = "PuzzlesLib-v26.1.15-mc26.1.x-NeoForge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/QAGBst4M/versions/RTC7EJbD/PuzzlesLib-v26.1.15-mc26.1.x-NeoForge.jar"
+hash-format = "sha512"
+hash = "7549c26fd45e1b5acd7c32260dd077371f27e0a695d8c369c13b09cb3e7b7c5943dded9c412e53eb579d2725cfda6cf836fd599a97c21d71525fed5d284be8ac"
+
+[update]
+[update.modrinth]
+mod-id = "QAGBst4M"
+version = "RTC7EJbD"

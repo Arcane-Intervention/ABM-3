@@ -1,0 +1,13 @@
+name = "The One Probe"
+filename = "theoneprobe-26.1.2_neo-14.0.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Eyw0UxEx/versions/NOrwYJkt/theoneprobe-26.1.2_neo-14.0.0.jar"
+hash-format = "sha512"
+hash = "e5e444de959fbd8616955854c4816b5ed6dec2f9ccf7d65496df1151e6304d56dd3e5abfa4b24595fbd2e73c93d0103e1eac74a4543d414a2cacd25f312bcf3b"
+
+[update]
+[update.modrinth]
+mod-id = "Eyw0UxEx"
+version = "NOrwYJkt"

@@ -1,0 +1,13 @@
+name = "Aquaculture 2"
+filename = "Aquaculture-26.1.1-2.9.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Vl1uNAuy/versions/I2FfOQUM/Aquaculture-26.1.1-2.9.2.jar"
+hash-format = "sha512"
+hash = "8e093d99d523787030df2f2c9df7bd7353e9afa445a140b1b2fe23886e1d253f03372565e9fdf4ed06be14def6b56c9ddc9ba04b62c4c2b623727c2e53d1abca"
+
+[update]
+[update.modrinth]
+mod-id = "Vl1uNAuy"
+version = "I2FfOQUM"

@@ -1,0 +1,13 @@
+name = "ElevatorMod"
+filename = "elevatorid-neoforge-26.1-1.16.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/hi2dSXTu/versions/m91X4rrm/elevatorid-neoforge-26.1-1.16.2.jar"
+hash-format = "sha512"
+hash = "24b9753c6be73fbdce4cf51f10725b445ca88adafbd67cd401c08905915dcc16950228643d672e636bdbb19b18db4592aa71b027d4f0bf6ad40294f0e7bdfe02"
+
+[update]
+[update.modrinth]
+mod-id = "hi2dSXTu"
+version = "m91X4rrm"

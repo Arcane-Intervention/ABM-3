@@ -1,0 +1,13 @@
+name = "LTX Industries"
+filename = "ltxi-26.1.2-2.2.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "dc4ea84a454f8e7fe82a10685de5443728df030f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8904081
+project-id = 1075456

@@ -1,0 +1,13 @@
+name = "Artifacts"
+filename = "artifacts-neoforge-15.1.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/P0Mu4wcQ/versions/tG5MWOIW/artifacts-neoforge-15.1.3.jar"
+hash-format = "sha512"
+hash = "536d77fbb8b83fcd3002d886b37fb26cc873fa0fd6098163e0502ffd28f188d162bbdb75157f4d85f81b6c58ca339aaba8092a9b11be9fc25457aef22d1a204e"
+
+[update]
+[update.modrinth]
+mod-id = "P0Mu4wcQ"
+version = "tG5MWOIW"

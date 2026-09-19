@@ -1,0 +1,13 @@
+name = "Gateways to Eternity"
+filename = "GatewaysToEternity-26.1.2-6.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/8OIeAukW/versions/nDeKKfH1/GatewaysToEternity-26.1.2-6.0.2.jar"
+hash-format = "sha512"
+hash = "caecdaa6b6110f08290090283aee1577431b802763c16a18222840d14801b2424b4708c2fe4a00b41622242a8a1c97b634f9f62395677a767d5cf97b57da77cb"
+
+[update]
+[update.modrinth]
+mod-id = "8OIeAukW"
+version = "nDeKKfH1"

@@ -1,0 +1,13 @@
+name = "Fantasy's Furniture - Royal"
+filename = "fantasyfurniture_royal-26.1.7.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/OIAm13ki/versions/pA4hOxPT/fantasyfurniture_royal-26.1.7.jar"
+hash-format = "sha512"
+hash = "3cb058b9fc5f598894c8a4021d197cf9d115d403065323cdc91281dc4b30ffcd20874546d5cec1ca51a1cea5f0c5f57f4282306fd69ee213bc7e8755560d7e69"
+
+[update]
+[update.modrinth]
+mod-id = "OIAm13ki"
+version = "pA4hOxPT"

@@ -1,0 +1,13 @@
+name = "The Lost Cities"
+filename = "LostCities-26.1.2-10.0.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/8VDCUS3b/versions/J7UgUCRo/LostCities-26.1.2-10.0.4.jar"
+hash-format = "sha512"
+hash = "f4e808fe6caa31f305e743a76e611f012ca4812bbd61723df1f7023777946d7d5fe17da4fea7245b78eba140dc86624b9f6c45e4bbaa00e383f33e87112cbd79"
+
+[update]
+[update.modrinth]
+mod-id = "8VDCUS3b"
+version = "J7UgUCRo"

@@ -1,0 +1,13 @@
+name = "Lost Cities Modern Tweaks"
+filename = "lostcities-modern-tweaks-v4.0.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/HdIQwHGq/versions/VWk6D1qI/lostcities-modern-tweaks-v4.0.1.jar"
+hash-format = "sha512"
+hash = "5f314e3e2283368a038cd1ccf26cc36236fe0a8648f95ca74b407bd2a052ee512cc0a9cb736b01b6aa4d1381ceb6ce67211f1f668269def86a21398ceb7cad52"
+
+[update]
+[update.modrinth]
+mod-id = "HdIQwHGq"
+version = "VWk6D1qI"

@@ -1,0 +1,13 @@
+name = "YUNG's Better Dungeons"
+filename = "YungsBetterDungeons-26.1.2-NeoForge-6.1.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/o1C1Dkj5/versions/e1qEvr8D/YungsBetterDungeons-26.1.2-NeoForge-6.1.1.jar"
+hash-format = "sha512"
+hash = "4e7a76ad46f8ca5421bb8bada399f95c04c333012d35b054ec8f0a06f30ece5e09ac51d76dbd294de17b5029fe3995a9d657e055c6c9d84761d488a077809b3f"
+
+[update]
+[update.modrinth]
+mod-id = "o1C1Dkj5"
+version = "e1qEvr8D"

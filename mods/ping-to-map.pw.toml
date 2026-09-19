@@ -1,0 +1,13 @@
+name = "Ping to Map: JourneyMap"
+filename = "ping2map-1.2.2-neoforge-26.1.2.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/NufpsG8i/versions/ka7mugbW/ping2map-1.2.2-neoforge-26.1.2.jar"
+hash-format = "sha512"
+hash = "cae9451d7a6032f956354034746a3768638c049df24a1bd956d45d787d7bceacdead91f28a82629030714d7d2d869285c3da5ce9f4becea2352c0f1652cb4774"
+
+[update]
+[update.modrinth]
+mod-id = "NufpsG8i"
+version = "ka7mugbW"

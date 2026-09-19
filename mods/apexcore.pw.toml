@@ -1,0 +1,13 @@
+name = "ApexCore"
+filename = "apexcore-26.1.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/xl3myxch/versions/Xc9AVbkn/apexcore-26.1.4.jar"
+hash-format = "sha512"
+hash = "6accdf08ffa4f61de4d4f839da1f60147130e9a214f65b15986b441c72e2cf758a08ed6f96b36182c02428f370a292a6859b4e5bc4e68f607e1eee53cfef409a"
+
+[update]
+[update.modrinth]
+mod-id = "xl3myxch"
+version = "Xc9AVbkn"

@@ -1,0 +1,13 @@
+name = "Prickle"
+filename = "PrickleMC-neoforge-MC26.1.2-26.1.2.6.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/aaRl8GiW/versions/FzfKD3xX/PrickleMC-neoforge-MC26.1.2-26.1.2.6.jar"
+hash-format = "sha512"
+hash = "b6c04d8dfe7541aac9fbe78555a253dbbeac9e560fffc851bce65c2b980910c855824315612e47b316cb279d0405d3f67a775f8b239432f13bd50b16cdd9a6de"
+
+[update]
+[update.modrinth]
+mod-id = "aaRl8GiW"
+version = "FzfKD3xX"

@@ -1,0 +1,13 @@
+name = "Nanite Library"
+filename = "nanite-library-neoforge-26.1.2.6.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/xSlNcCOe/versions/srylViXN/nanite-library-neoforge-26.1.2.6.jar"
+hash-format = "sha512"
+hash = "efebcc8ab10a8da68123e52839e5db5bb5efa383cf1cd419ac15138eef49640617811f0a96393d206741b5437a21356fa4b66b26475555e3bd4575f1381f2b8c"
+
+[update]
+[update.modrinth]
+mod-id = "xSlNcCOe"
+version = "srylViXN"

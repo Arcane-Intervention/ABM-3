@@ -1,0 +1,13 @@
+name = "Theurgy"
+filename = "theurgy-26.1.2-neoforge-1.115.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/uOVMgoil/versions/yfHcc2Lc/theurgy-26.1.2-neoforge-1.115.1.jar"
+hash-format = "sha512"
+hash = "ce584157ae6f106160eee395b9bc1f5d90e3233177c486aa012c38f6b742d896f12f18a4e835dd3431c94547e4efb4ff170adcdeb90df4c1d206723accaadc6f"
+
+[update]
+[update.modrinth]
+mod-id = "uOVMgoil"
+version = "yfHcc2Lc"

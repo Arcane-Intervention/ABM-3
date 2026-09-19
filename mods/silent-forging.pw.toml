@@ -1,0 +1,13 @@
+name = "Silent Forging"
+filename = "silentforging-26.1.2-1.0.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/CmueAqja/versions/pgrzOx2Y/silentforging-26.1.2-1.0.1.jar"
+hash-format = "sha512"
+hash = "859c9a3a8c14da05f6762ad3baf5fd0e08f8d9e6b3212524a783f5d93f7f41082cdef1fea0b33a7709bbc68482d2626c0d1aa4a9607da17055adbe7a27239f00"
+
+[update]
+[update.modrinth]
+mod-id = "CmueAqja"
+version = "pgrzOx2Y"

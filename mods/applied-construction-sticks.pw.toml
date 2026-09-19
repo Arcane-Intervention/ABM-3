@@ -1,0 +1,13 @@
+name = "Applied Construction Sticks"
+filename = "appliedsticks-26.1.2-2.0.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/SmHoF8i7/versions/4I7ydDfV/appliedsticks-26.1.2-2.0.4.jar"
+hash-format = "sha512"
+hash = "96ef4cd1180ff6fb2716e1e4f59a4f534ea46116e37e97fb6a770c533acc98e77e57443f9a84ac1982084a703529e0a49803b2af43f06acc1f5d8f0212f39a03"
+
+[update]
+[update.modrinth]
+mod-id = "SmHoF8i7"
+version = "4I7ydDfV"

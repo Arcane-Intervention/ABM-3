@@ -1,0 +1,13 @@
+name = "MapFrontiers"
+filename = "MapFrontiers-26.1.2-neoforge-3.0.0-beta.12.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/hWlsli6y/versions/6J25DKMv/MapFrontiers-26.1.2-neoforge-3.0.0-beta.12.jar"
+hash-format = "sha512"
+hash = "0f3aff0ec8f5862a698b3f9748464ed51e4245d14a4a18f39742a47fb3efbfeba569156654f1536f21e82a618c11325c4edcc601662325b159c9c6cc62bc633c"
+
+[update]
+[update.modrinth]
+mod-id = "hWlsli6y"
+version = "6J25DKMv"

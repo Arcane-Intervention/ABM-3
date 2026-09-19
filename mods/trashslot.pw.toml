@@ -1,0 +1,13 @@
+name = "TrashSlot"
+filename = "trashslot-neoforge-26.1.2-26.1.2.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/vRYk0bv7/versions/lZYf8oM4/trashslot-neoforge-26.1.2-26.1.2.4.jar"
+hash-format = "sha512"
+hash = "6e107a898a440a1f329badc8174ae611f056310bfc1f478f2b384a774fff107d707e67fb63dd38ec9aa4bae8038ba45502590ba4302898c6e1b307db94ce20b7"
+
+[update]
+[update.modrinth]
+mod-id = "vRYk0bv7"
+version = "lZYf8oM4"

@@ -1,0 +1,13 @@
+name = "Mouse Tweaks"
+filename = "MouseTweaks-neoforge-mc26.1-2.31.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/aC3cM3Vq/versions/Vd1fgVcT/MouseTweaks-neoforge-mc26.1-2.31.jar"
+hash-format = "sha512"
+hash = "020927251342a5f73363fbf8312c4e7219c24fd3021190b2387eeb1472ac16b3291b14d19ce3d4e4063c6d5f24a1b92a21b9ce290359af22e40dd4ff14597e9e"
+
+[update]
+[update.modrinth]
+mod-id = "aC3cM3Vq"
+version = "Vd1fgVcT"

@@ -1,0 +1,13 @@
+name = "Silent Lib"
+filename = "silent-lib-26.1.2-neoforge-11.2.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/BQhuHQo4/versions/Rc4eCDXl/silent-lib-26.1.2-neoforge-11.2.0.jar"
+hash-format = "sha512"
+hash = "ebaadc0fbcb4fc9a42a9271910e5b5635f585220eecab2f8a39f2819c5ba39af054e0955b1dd8eabf126e9973348e0a36d1b5206d9929e9a510d7bb80d4b52f6"
+
+[update]
+[update.modrinth]
+mod-id = "BQhuHQo4"
+version = "Rc4eCDXl"

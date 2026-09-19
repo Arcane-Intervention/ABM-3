@@ -1,0 +1,13 @@
+name = "Fantasy's Furniture - Dunmer"
+filename = "fantasyfurniture_dunmer-26.1.7.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Bs7e2IyQ/versions/KJ3m6BDj/fantasyfurniture_dunmer-26.1.7.jar"
+hash-format = "sha512"
+hash = "5e86a20cc99390e1789c8759e29e582e35d5c20cc6fd877b2e9920f25ae485cf9d5d75c360d4649c9775b9b818d13e133294a51f8342390ec5c736f17b6c6d12"
+
+[update]
+[update.modrinth]
+mod-id = "Bs7e2IyQ"
+version = "KJ3m6BDj"

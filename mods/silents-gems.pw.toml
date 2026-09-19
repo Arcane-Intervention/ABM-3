@@ -1,0 +1,13 @@
+name = "Silent's Gems"
+filename = "silentgems-26.1.2-neoforge-5.1.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Y036wakZ/versions/GF1jsWHo/silentgems-26.1.2-neoforge-5.1.4.jar"
+hash-format = "sha512"
+hash = "a627a00f360664d9ca0005ddb816ca5341dc32ed0be275283629ce8b806152c6b1961393f2699bd8247b07499fa580e24cb1c478da7fc304301e79377d466b4c"
+
+[update]
+[update.modrinth]
+mod-id = "Y036wakZ"
+version = "GF1jsWHo"

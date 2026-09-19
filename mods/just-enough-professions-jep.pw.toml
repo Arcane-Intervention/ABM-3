@@ -1,0 +1,13 @@
+name = "Just Enough Professions (JEP)"
+filename = "JustEnoughProfessions-neoforge-26.1.2-11.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/kB56GtWA/versions/aTSBRr3o/JustEnoughProfessions-neoforge-26.1.2-11.0.2.jar"
+hash-format = "sha512"
+hash = "7ffd78e9c5517267c7423202d27a74a87b86334f115210a58703db21983ec22adb1c380363e73249f5b0004d9ad03f6c7b97a6dffdd998691f0acbcd271be70f"
+
+[update]
+[update.modrinth]
+mod-id = "kB56GtWA"
+version = "aTSBRr3o"

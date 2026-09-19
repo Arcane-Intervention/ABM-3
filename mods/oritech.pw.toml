@@ -1,0 +1,13 @@
+name = "Oritech"
+filename = "oritech-2.0.0-exp6.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/4sYI62kA/versions/2xLWeZUn/oritech-2.0.0-exp6.jar"
+hash-format = "sha512"
+hash = "5f2059ff8267b22d84c23f5ae09ecb1d0c55b760976dfe04a669272d44def1460f2619574a02cc35ed63d2cbf2cacde768060cd9f002da7626fc96a35228fe41"
+
+[update]
+[update.modrinth]
+mod-id = "4sYI62kA"
+version = "2xLWeZUn"

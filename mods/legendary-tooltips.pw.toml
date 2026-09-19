@@ -1,0 +1,13 @@
+name = "Legendary Tooltips"
+filename = "LegendaryTooltips-26.1.2-neoforge-1.6.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/atHH8NyV/versions/ZaJ1nyhV/LegendaryTooltips-26.1.2-neoforge-1.6.1.jar"
+hash-format = "sha512"
+hash = "4d2b52a34196578b35167f75a45a5157e7fca303e0ce9e62f95d9ecbe01f3f5e6959a6ca88245c29db9f92664133ffb84b2fc96e8163362859c06a3d020782fb"
+
+[update]
+[update.modrinth]
+mod-id = "atHH8NyV"
+version = "ZaJ1nyhV"

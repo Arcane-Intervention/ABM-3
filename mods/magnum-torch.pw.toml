@@ -1,0 +1,13 @@
+name = "Magnum Torch"
+filename = "MagnumTorch-v26.1.0-mc26.1.x-NeoForge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/jorDmSKv/versions/TIbKyLET/MagnumTorch-v26.1.0-mc26.1.x-NeoForge.jar"
+hash-format = "sha512"
+hash = "c3d86a0b2d4898568da9812ce97e6253c8016b6218e45d602cf6fe0e6a9295ec508762fd580eef7241b965005860505f78d301a4f63c3219ce28059c3a27ddfb"
+
+[update]
+[update.modrinth]
+mod-id = "jorDmSKv"
+version = "TIbKyLET"

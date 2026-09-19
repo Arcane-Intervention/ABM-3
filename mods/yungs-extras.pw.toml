@@ -1,0 +1,13 @@
+name = "YUNG's Extras"
+filename = "YungsExtras-26.1.2-NeoForge-6.1.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/ZYgyPyfq/versions/nxaj9k0R/YungsExtras-26.1.2-NeoForge-6.1.0.jar"
+hash-format = "sha512"
+hash = "cca70df46c3cb455601cf0fb55076a5e9be01dbe58f88a418a54b8c0c570ea254d746eec28dd4886daa212a2eecc061a3d2a77118070dafd6ada28adeebf9222"
+
+[update]
+[update.modrinth]
+mod-id = "ZYgyPyfq"
+version = "nxaj9k0R"
