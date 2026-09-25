@@ -1,0 +1,31 @@
+#Machine Settings
+[machines]
+
+	#Planter Configuration
+	[machines.planter]
+		#Base processing time (ticks)
+		# Default: 1200
+		# Range: 1 ~ 72000
+		base_processing_time = 1200
+		#Speed multiplier applied when a cloche is attached to a planter
+		# Default: 1.15
+		# Range: 0.1 ~ 10.0
+		cloche_speed_multiplier = 1.15
+		#Yield multiplier applied when a cloche is attached to a planter
+		# Default: 1.1
+		# Range: 0.1 ~ 10.0
+		cloche_yield_multiplier = 1.1
+
+	#Raised Bed Configuration
+	[machines.raised_bed]
+		#Speed multiplier applied when the raised bed has sky access and it is daytime
+		# Default: 1.25
+		# Range: 0.1 ~ 10.0
+		sky_day_speed_multiplier = 1.25
+
+	#Crate Configuration
+	[machines.crate]
+		#How often (in ticks) the crate scans for nearby item entities
+		# Default: 20
+		# Range: 1 ~ 1200
+		pickup_interval_ticks = 20

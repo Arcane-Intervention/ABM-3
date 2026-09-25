@@ -1,0 +1,19 @@
+[feature]
+	#Master switch. If false, ping waypoints are not registered.
+	enabled = true
+	#If true, your own pings are also registered as waypoints. If false, only teammate pings.
+	registerOwnPings = true
+
+[appearance]
+	#If true (default), the map waypoint disappears at the same time as the Ping-Wheel ping:
+	#its lifetime follows Ping-Wheel's own pingDuration setting, so the in-world ping and the
+	#map waypoint vanish together. If false, the fixed 'waypointLifetimeSec' below is used.
+	syncWithPingWheel = true
+	#Manual waypoint lifetime in seconds. Only used when 'syncWithPingWheel' is false.
+	#Set to -1 for permanent waypoints (not recommended for ping use case).
+	# Default: 30
+	# Range: -1 ~ 600
+	waypointLifetimeSec = 30
+	#If true, use the pinger's team color (vanilla scoreboard team).
+	#If false, all ping waypoints use the brand color (cyan #00FFFF).
+	useTeamColor = true

@@ -1,0 +1,3 @@
+#Tool forge craft tolerance. EASY = +/-5, NORMAL = +/-3, HARD = +/-1
+#Allowed Values: EASY, NORMAL, HARD
+craftDifficulty = "NORMAL"

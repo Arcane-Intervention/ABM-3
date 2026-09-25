@@ -1,0 +1,5 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"aether_ii:shifting_glass","components":"{\"minecraft:damage\":483}"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"aether_ii:scatterglass_shard"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]
