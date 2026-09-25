@@ -1,0 +1,376 @@
+name: Audit mod configs
+
+on:
+  push:
+    paths:
+      - 'mods/*.pw.toml'
+      - 'config/**'
+      - 'defaultconfigs/**'
+      - 'docs/config-manifest.toml'
+      - '.github/workflows/audit-configs.yml'
+  pull_request:
+    paths:
+      - 'mods/*.pw.toml'
+      - 'config/**'
+      - 'defaultconfigs/**'
+      - 'docs/config-manifest.toml'
+      - '.github/workflows/audit-configs.yml'
+  workflow_dispatch:
+    inputs:
+      propose_high_confidence:
+        description: 'Propose high-confidence config owners in a PR'
+        required: true
+        default: true
+        type: boolean
+      minimum_confidence:
+        description: 'Minimum confidence for automatic PR suggestions'
+        required: true
+        default: '0.90'
+        type: choice
+        options: ['0.95', '0.90', '0.85']
+      accepted_owners:
+        description: 'Confirmed mappings: config/path=packwiz-key (semicolon or newline separated)'
+        required: false
+        type: string
+      configless_mods:
+        description: 'Confirmed configless Packwiz keys (comma, semicolon, or newline separated)'
+        required: false
+        type: string
+      bootstrap_unmatched_as_configless:
+        description: 'After a clean launch, propose all remaining unmatched mods as configless'
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out pack
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Audit and prepare optional manifest proposal
+        id: audit
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PROPOSE_HIGH_CONFIDENCE: ${{ inputs.propose_high_confidence || 'false' }}
+          MIN_CONFIDENCE: ${{ inputs.minimum_confidence || '0.90' }}
+          ACCEPTED_OWNERS: ${{ inputs.accepted_owners || '' }}
+          CONFIGLESS_MODS: ${{ inputs.configless_mods || '' }}
+          BOOTSTRAP_CONFIGLESS: ${{ inputs.bootstrap_unmatched_as_configless || 'false' }}
+        run: |
+          python3 - <<'PY'
+          import difflib, json, os, re, sys, tomllib
+          from pathlib import Path
+
+          ROOT = Path.cwd()
+          MANIFEST = ROOT / 'docs' / 'config-manifest.toml'
+          CONFIG_ROOTS = ('config', 'defaultconfigs')
+          IGNORED = {'.gitkeep', '.DS_Store'}
+
+          def yes(v):
+              return str(v).strip().lower() in {'1', 'true', 'yes', 'on'}
+
+          def load_toml(path):
+              if not path.exists():
+                  return {}
+              with path.open('rb') as f:
+                  return tomllib.load(f)
+
+          def norm(s):
+              return ''.join(c.lower() for c in s if c.isalnum())
+
+          def mods():
+              result = {}
+              for p in sorted((ROOT / 'mods').glob('*.pw.toml')):
+                  d = load_toml(p)
+                  key = p.name.removesuffix('.pw.toml')
+                  result[key] = {
+                      'name': str(d.get('name', key)),
+                      'filename': str(d.get('filename', '')),
+                  }
+              return result
+
+          def configs():
+              out = set()
+              for root_name in CONFIG_ROOTS:
+                  root = ROOT / root_name
+                  if root.exists():
+                      for p in root.rglob('*'):
+                          if p.is_file() and p.name not in IGNORED:
+                              out.add(p.relative_to(ROOT).as_posix())
+              return out
+
+          def read_manifest():
+              d = load_toml(MANIFEST)
+              raw_mods = d.get('mods', {})
+              if not isinstance(raw_mods, dict):
+                  raise ValueError('[mods] must be a TOML table')
+              entries = {}
+              for key, raw in raw_mods.items():
+                  if not isinstance(raw, dict):
+                      raise ValueError(f'{key}: manifest entry must be a TOML table')
+                  owned = raw.get('configs', [])
+                  if not isinstance(owned, list) or not all(isinstance(x, str) for x in owned):
+                      raise ValueError(f'{key}: configs must be an array of strings')
+                  entries[str(key)] = {
+                      'configs': list(dict.fromkeys(owned)),
+                      'configless': bool(raw.get('configless', False)),
+                  }
+              pack = d.get('pack', {}) or {}
+              pack_configs = pack.get('configs', []) if isinstance(pack, dict) else []
+              return entries, list(dict.fromkeys(pack_configs))
+
+          def write_manifest(entries, pack_configs):
+              MANIFEST.parent.mkdir(parents=True, exist_ok=True)
+              lines = [
+                  '# ABM-3 config ownership manifest',
+                  '# Machine-maintained by .github/workflows/audit-configs.yml.',
+                  '# Review generated PRs before merging.',
+                  '',
+              ]
+              if pack_configs:
+                  lines += ['[pack]', 'configs = [']
+                  lines += [f'  {json.dumps(x)},' for x in sorted(set(pack_configs))]
+                  lines += [']', '']
+              for key in sorted(entries):
+                  e = entries[key]
+                  lines.append(f'[mods.{json.dumps(key)}]')
+                  if e['configs']:
+                      lines.append('configs = [')
+                      lines += [f'  {json.dumps(x)},' for x in sorted(set(e['configs']))]
+                      lines.append(']')
+                  if e['configless']:
+                      lines.append('configless = true')
+                  lines.append('')
+              MANIFEST.write_text('\n'.join(lines), encoding='utf-8')
+
+          def valid_path(p):
+              p = Path(p).as_posix()
+              if p.startswith('/') or '..' in Path(p).parts:
+                  raise ValueError(f'unsafe config path: {p}')
+              if not any(p == r or p.startswith(r + '/') for r in CONFIG_ROOTS):
+                  raise ValueError(f'config path must be under config/ or defaultconfigs/: {p}')
+              return p
+
+          def stem(path):
+              name = Path(path).name
+              name = re.sub(r'(?i)\.(toml|json5|json|yaml|yml|cfg|conf)$', '', name)
+              return re.sub(r'(?i)([-_.](client|common|server|config|settings|general))+$', '', name)
+
+          def aliases(key, mod):
+              out = {norm(key), norm(mod['name'])}
+              fn = Path(mod['filename']).stem if mod['filename'] else ''
+              if fn:
+                  out.add(norm(fn))
+                  out.add(norm(re.split(r'(?i)(?:[-_.](?:neo?forge|fabric|mc)?\d)', fn, maxsplit=1)[0]))
+              return {x for x in out if x}
+
+          def suggestion(path, all_mods, minimum):
+              target = norm(stem(path))
+              ranked = []
+              for key, mod in all_mods.items():
+                  score = 0.0
+                  for a in aliases(key, mod):
+                      if target == a:
+                          score = max(score, 1.0)
+                      elif target.startswith(a) or a.startswith(target):
+                          score = max(score, 0.97)
+                      elif a in target or target in a:
+                          score = max(score, 0.94)
+                      else:
+                          score = max(score, difflib.SequenceMatcher(None, target, a).ratio() * 0.88)
+                  ranked.append((score, key))
+              ranked.sort(reverse=True)
+              if not ranked:
+                  return None, 0.0
+              best, key = ranked[0]
+              second = ranked[1][0] if len(ranked) > 1 else 0.0
+              if best >= minimum and (best - second >= 0.06 or best >= 0.985):
+                  return key, best
+              return None, best
+
+          def claims(entries, pack_configs):
+              owned, errors = {}, []
+              for p in pack_configs:
+                  p = valid_path(p)
+                  owned[p] = '@pack'
+              for key, e in entries.items():
+                  if e['configless'] and e['configs']:
+                      errors.append(f'{key}: cannot be configless and own configs')
+                  for p in e['configs']:
+                      p = valid_path(p)
+                      if p in owned and owned[p] != key:
+                          errors.append(f'{p}: claimed by both {owned[p]} and {key}')
+                      owned[p] = key
+              return owned, errors
+
+          def assign(entries, owner, path):
+              e = entries.setdefault(owner, {'configs': [], 'configless': False})
+              e['configless'] = False
+              if path not in e['configs']:
+                  e['configs'].append(path)
+
+          def explicit_mappings(raw):
+              out = {}
+              for line in raw.replace(';', '\n').splitlines():
+                  line = line.strip()
+                  if not line:
+                      continue
+                  if '=' not in line:
+                      raise ValueError(f'bad accepted_owners entry: {line}')
+                  p, owner = line.split('=', 1)
+                  out[valid_path(p.strip())] = owner.strip()
+              return out
+
+          def key_list(raw):
+              raw = raw.replace(';', '\n').replace(',', '\n')
+              return {x.strip() for x in raw.splitlines() if x.strip()}
+
+          def audit(all_mods, all_configs, entries, pack_configs, minimum):
+              errors, review, hints = [], [], []
+              owned, claim_errors = claims(entries, pack_configs)
+              errors += claim_errors
+
+              for key, e in sorted(entries.items()):
+                  if key not in all_mods:
+                      errors.append(f'{key}: manifest entry exists but mods/{key}.pw.toml is absent')
+                  if not e['configs'] and not e['configless']:
+                      review.append(
+                          f'{key}: manifest entry is incomplete; list configs or set configless=true'
+                      )
+                  for p in e['configs']:
+                      if p not in all_configs:
+                          errors.append(f'{key}: listed config is missing: {p}')
+              for p in pack_configs:
+                  if p not in all_configs:
+                      errors.append(f'@pack: listed config is missing: {p}')
+
+              for key, mod in sorted(all_mods.items()):
+                  if key not in entries:
+                      review.append(f'{key} ({mod["name"]}): new/unreviewed mod')
+
+              for p in sorted(all_configs):
+                  if p not in owned:
+                      owner, confidence = suggestion(p, all_mods, minimum)
+                      if owner:
+                          review.append(f'{p}: unowned; possible owner {owner} ({confidence:.0%})')
+                          hints.append(f'{p}={owner}')
+                      else:
+                          review.append(f'{p}: unowned; no safe owner suggestion')
+              return errors, review, hints
+
+          try:
+              all_mods = mods()
+              all_configs = configs()
+              entries, pack_configs = read_manifest()
+              before = json.dumps([entries, pack_configs], sort_keys=True)
+              minimum = float(os.environ.get('MIN_CONFIDENCE', '0.90'))
+              manual = os.environ.get('EVENT_NAME') == 'workflow_dispatch'
+
+              for path, owner in explicit_mappings(os.environ.get('ACCEPTED_OWNERS', '')).items():
+                  if owner not in all_mods:
+                      raise ValueError(f'unknown Packwiz key in accepted_owners: {owner}')
+                  if path not in all_configs:
+                      raise ValueError(f'accepted config is not present in repo: {path}')
+                  assign(entries, owner, path)
+
+              for key in key_list(os.environ.get('CONFIGLESS_MODS', '')):
+                  if key not in all_mods:
+                      raise ValueError(f'unknown Packwiz key in configless_mods: {key}')
+                  e = entries.setdefault(key, {'configs': [], 'configless': False})
+                  if e['configs']:
+                      raise ValueError(f'{key} already owns configs and cannot be configless')
+                  e['configless'] = True
+
+              if manual and yes(os.environ.get('PROPOSE_HIGH_CONFIDENCE', 'false')):
+                  owned, _ = claims(entries, pack_configs)
+                  for path in sorted(all_configs - set(owned)):
+                      owner, _ = suggestion(path, all_mods, minimum)
+                      if owner:
+                          assign(entries, owner, path)
+
+              if manual and yes(os.environ.get('BOOTSTRAP_CONFIGLESS', 'false')):
+                  owned, _ = claims(entries, pack_configs)
+                  owners_with_configs = {x for x in owned.values() if x != '@pack'}
+                  for key in sorted(all_mods):
+                      if key not in entries and key not in owners_with_configs:
+                          entries[key] = {'configs': [], 'configless': True}
+
+              after = json.dumps([entries, pack_configs], sort_keys=True)
+              changed = before != after
+              if changed:
+                  write_manifest(entries, pack_configs)
+
+              errors, review, hints = audit(all_mods, all_configs, entries, pack_configs, minimum)
+
+              with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a', encoding='utf-8') as f:
+                  f.write('# Config audit\n\n')
+                  f.write(f'- **{len(all_mods)}** Packwiz mods\n')
+                  f.write(f'- **{len(all_configs)}** shipped config files\n')
+                  f.write(f'- **{len(entries)}** reviewed mod entries\n\n')
+                  if errors:
+                      f.write('## Errors\n\n' + ''.join(f'- ❌ {x}\n' for x in errors) + '\n')
+                  if review:
+                      f.write('## Needs review\n\n' + ''.join(f'- ⚠️ {x}\n' for x in review) + '\n')
+                  if hints:
+                      f.write('## Suggested owner mappings\n\n```text\n' + '\n'.join(hints) + '\n```\n\n')
+                  if changed:
+                      f.write('A manifest change was prepared. A PR will be opened; **merging it is the approval step**.\n')
+                  elif not errors and not review:
+                      f.write('✅ **Audit clean.**\n')
+
+              with Path(os.environ['GITHUB_OUTPUT']).open('a', encoding='utf-8') as f:
+                  f.write(f'manifest_changed={str(changed).lower()}\n')
+                  f.write(f'audit_failed={str(bool(errors or review)).lower()}\n')
+
+              print(f'Config audit: {len(errors)} errors, {len(review)} review items, changed={changed}')
+
+          except Exception as exc:
+              print(f'Config audit failed: {exc}', file=sys.stderr)
+              with Path(os.environ['GITHUB_OUTPUT']).open('a', encoding='utf-8') as f:
+                  f.write('manifest_changed=false\n')
+                  f.write('audit_failed=true\n')
+              raise
+          PY
+
+      - name: Create or update manifest proposal PR
+        if: github.event_name == 'workflow_dispatch' && steps.audit.outputs.manifest_changed == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BASE_BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          SAFE_BASE="${BASE_BRANCH//\//-}"
+          BRANCH="automation/config-manifest-${SAFE_BASE}"
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -B "$BRANCH"
+          git add docs/config-manifest.toml
+          git commit -m 'chore: update config ownership manifest'
+          git push --force origin "$BRANCH"
+
+          PR_NUMBER="$(gh pr list --head "$BRANCH" --base "$BASE_BRANCH" --state open --json number --jq '.[0].number // empty')"
+          BODY='Automated config-manifest proposal. Review all ownership mappings and configless entries before merging. Merging this PR is the approval step; the workflow does not write suggestions directly to the base branch.'
+
+          if [ -n "$PR_NUMBER" ]; then
+            gh pr edit "$PR_NUMBER" --title 'chore: update config ownership manifest' --body "$BODY"
+          else
+            gh pr create --base "$BASE_BRANCH" --head "$BRANCH" --title 'chore: update config ownership manifest' --body "$BODY"
+          fi
+
+      - name: Enforce audit on normal pushes and pull requests
+        if: github.event_name != 'workflow_dispatch' && steps.audit.outputs.audit_failed == 'true'
+        run: |
+          echo 'Config audit requires review. See the job summary.'
+          exit 1
