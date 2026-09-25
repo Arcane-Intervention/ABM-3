@@ -1,0 +1,562 @@
+# ABM-3 config ownership manifest
+# Machine-maintained by .github/workflows/audit-configs.yml.
+# Review generated PRs before merging.
+
+[mods."3dskinlayers"]
+configs = [
+  "config/skinlayers.json",
+]
+
+[mods."accelerated-decay"]
+configless = true
+
+[mods."advancedae"]
+configs = [
+  "config/advanced_ae-client.toml",
+  "config/advanced_ae-common.toml",
+]
+
+[mods."ae2"]
+configs = [
+  "config/ae2-client.toml",
+  "config/ae2-common.toml",
+]
+
+[mods."aether-ii"]
+configs = [
+  "config/aether_ii-common.toml",
+  "config/aether_ii-server.toml",
+]
+
+[mods."agritech"]
+configs = [
+  "config/agritechtwo-common.toml",
+]
+
+[mods."apexcore"]
+configless = true
+
+[mods."apothic-attributes"]
+configs = [
+  "config/apotheosis/apothic_attributes.cfg",
+]
+
+[mods."appleskin"]
+configs = [
+  "config/appleskin-client.toml",
+]
+
+[mods."applied-construction-sticks"]
+configless = true
+
+[mods."applied-energistics-2-wireless-terminals"]
+configs = [
+  "config/ae2wtlib-client.toml",
+  "config/ae2wtlib.toml",
+]
+
+[mods."aquaculture"]
+configs = [
+  "config/aquaculture-common.toml",
+]
+
+[mods."aquaculture-2-lava-fishing-addon"]
+configless = true
+
+[mods."artifacts"]
+configless = true
+
+[mods."athena-ctm"]
+configless = true
+
+[mods."baguettelib"]
+configless = true
+
+[mods."balm"]
+configless = true
+
+[mods."better-advanced-tooltips"]
+configs = [
+  "config/better-advanced-tooltips-client.toml",
+]
+
+[mods."betterf3"]
+configless = true
+
+[mods."bookshelf-lib"]
+configless = true
+
+[mods."chat-heads"]
+configs = [
+  "config/chat_heads.json5",
+]
+
+[mods."chunks-fade-in"]
+configs = [
+  "config/chunksfadein.properties",
+]
+
+[mods."cloth-config"]
+configless = true
+
+[mods."configured-defaults"]
+configs = [
+  "config/default.json",
+  "config/lostcities/profiles/default.json",
+]
+
+[mods."construction-sticks"]
+configs = [
+  "config/constructionstick-startup.toml",
+]
+
+[mods."corpse"]
+configs = [
+  "config/corpse-server.toml",
+]
+
+[mods."corpse-x-curios-api-compat"]
+configs = [
+  "config/corpsecurioscompat-common.toml",
+]
+
+[mods."curios"]
+configs = [
+  "config/curios-client.toml",
+  "config/curios-common.toml",
+  "config/curios-server.toml",
+]
+
+[mods."dark-utilities"]
+configless = true
+
+[mods."distanthorizons"]
+configs = [
+  "config/DistantHorizons.toml",
+]
+
+[mods."dynamic-fps"]
+configs = [
+  "config/dynamic_fps.json",
+]
+
+[mods."elevatormod"]
+configs = [
+  "config/elevatorid-server.toml",
+]
+
+[mods."enchantment-descriptions"]
+configless = true
+
+[mods."enderio"]
+configless = true
+
+[mods."entityculling"]
+configs = [
+  "config/entityculling.json",
+]
+
+[mods."explorers-compass"]
+configs = [
+  "config/explorerscompass-client.toml",
+  "config/explorerscompass-common.toml",
+]
+
+[mods."extended-ae"]
+configs = [
+  "config/extendedae-common.toml",
+]
+
+[mods."fantasy-furniture"]
+configless = true
+
+[mods."fantasys-furniture-dunmer"]
+configless = true
+
+[mods."fantasys-furniture-nordic"]
+configless = true
+
+[mods."fantasys-furniture-royal"]
+configless = true
+
+[mods."fantasys-furniture-venthyr"]
+configless = true
+
+[mods."ferrite-core"]
+configs = [
+  "config/ferritecore-mixin.toml",
+]
+
+[mods."forbidden-arcanus"]
+configs = [
+  "config/forbidden_arcanus-common.toml",
+]
+
+[mods."framedblocks"]
+configs = [
+  "config/framedblocks-client.toml",
+  "config/framedblocks-server.toml",
+]
+
+[mods."fusion-connected-textures"]
+configless = true
+
+[mods."gateways-to-eternity"]
+configless = true
+
+[mods."geckolib"]
+configless = true
+
+[mods."glodium"]
+configless = true
+
+[mods."guideme"]
+configs = [
+  "config/guideme.toml",
+]
+
+[mods."iceberg"]
+configless = true
+
+[mods."iris"]
+configs = [
+  "config/iris-excluded.json",
+  "config/iris.properties",
+]
+
+[mods."jei"]
+configs = [
+  "config/artifacts/items.toml",
+  "config/items.toml",
+  "config/jei-server.toml",
+  "config/jei/jei-client.ini",
+  "config/jei/jei-colors.ini",
+  "config/jei/jei-debug.ini",
+  "config/jei/jei-mod-id-format.ini",
+]
+
+[mods."journeymap"]
+configs = [
+  "config/journeymap-server.toml",
+]
+
+[mods."just-dire-things"]
+configs = [
+  "config/justdirethings-client.toml",
+  "config/justdirethings-server.toml",
+]
+
+[mods."just-enough-professions-jep"]
+configless = true
+
+[mods."kubejs"]
+configless = true
+
+[mods."lambdynamiclights"]
+configless = true
+
+[mods."limacore"]
+configless = true
+
+[mods."lithium"]
+configs = [
+  "config/lithium.properties",
+]
+
+[mods."lithostitched"]
+configs = [
+  "config/lithostitched.json",
+]
+
+[mods."lootjs"]
+configless = true
+
+[mods."lootr"]
+configs = [
+  "config/lootr-client.jsonc",
+  "config/lootr-common.jsonc",
+]
+
+[mods."lost-cities-modern-tweaks"]
+configless = true
+
+[mods."ltx-industries"]
+configs = [
+  "config/ltxi-client.toml",
+  "config/ltxi-machines.toml",
+  "config/ltxi-server.toml",
+  "config/ltxi-weapons.toml",
+]
+
+[mods."magnum-torch"]
+configs = [
+  "config/magnumtorch-server.toml",
+]
+
+[mods."mapfrontiers"]
+configs = [
+  "config/mapfrontiers-client.toml",
+]
+
+[mods."mmmmmmmmmmmm"]
+configs = [
+  "config/dummmmmmy-client.toml",
+  "config/dummmmmmy-common.toml",
+]
+
+[mods."modernfix"]
+configs = [
+  "config/modernfix-mixins.properties",
+]
+
+[mods."modonomicon"]
+configs = [
+  "config/modonomicon-client.toml",
+]
+
+[mods."moonlight"]
+configs = [
+  "config/moonlight-client.toml",
+  "config/moonlight-common.toml",
+]
+
+[mods."mouse-tweaks"]
+configless = true
+
+[mods."nanite-library"]
+configless = true
+
+[mods."neovitae"]
+configs = [
+  "config/neovitae-client.toml",
+  "config/neovitae-server.toml",
+]
+
+[mods."nyctography"]
+configless = true
+
+[mods."occultism"]
+configs = [
+  "config/occultism-client.toml",
+  "config/occultism-server.toml",
+  "config/occultism-startup.toml",
+]
+
+[mods."oritech"]
+configs = [
+  "config/oritech-client.toml",
+  "config/oritech-common.toml",
+  "config/oritech-startup.toml",
+]
+
+[mods."pickup-notifications"]
+configs = [
+  "config/pickupnotifications.toml",
+]
+
+[mods."pig-pen-cipher"]
+configless = true
+
+[mods."ping-to-map"]
+configs = [
+  "config/pingtomap-client.toml",
+]
+
+[mods."ping-wheel"]
+configs = [
+  "config/pingwheel.json",
+  "config/pingwheel.server.json",
+]
+
+[mods."placebo"]
+configless = true
+
+[mods."prickle"]
+configless = true
+
+[mods."productive-metalworks"]
+configs = [
+  "config/productivemetalworks-common.toml",
+]
+
+[mods."productivebees"]
+configs = [
+  "config/productivebees-client.toml",
+  "config/productivebees-server.toml",
+]
+
+[mods."productivefarming"]
+configs = [
+  "config/productivefarming-server.toml",
+  "config/productivefarming-startup.toml",
+]
+
+[mods."productivetrees"]
+configs = [
+  "config/productivetrees-server.toml",
+  "config/productivetrees-startup.toml",
+]
+
+[mods."puzzles-lib"]
+configless = true
+
+[mods."rechiseled"]
+configless = true
+
+[mods."rechiseled-applied-energistics-2"]
+configless = true
+
+[mods."rhino"]
+configless = true
+
+[mods."runelic"]
+configless = true
+
+[mods."shogi"]
+configless = true
+
+[mods."silent-forging"]
+configs = [
+  "config/silentforging-server.toml",
+]
+
+[mods."silent-gear"]
+configs = [
+  "config/silentgear-client.toml",
+  "config/silentgear-common.toml",
+]
+
+[mods."silent-gear-metalworks"]
+configless = true
+
+[mods."silent-lib"]
+configless = true
+
+[mods."silents-gems"]
+configs = [
+  "config/silentgems-common.toml",
+]
+
+[mods."sodium"]
+configs = [
+  "config/sodium-fingerprint.json",
+  "config/sodium-mixins.properties",
+  "config/sodium-options.json",
+]
+
+[mods."sodium-extra"]
+configless = true
+
+[mods."sophisticated-backpacks"]
+configs = [
+  "config/sophisticatedbackpacks-common.toml",
+  "config/sophisticatedbackpacks-server.toml",
+]
+
+[mods."sophisticated-core"]
+configs = [
+  "config/sophisticatedcore-client.toml",
+  "config/sophisticatedcore-common.toml",
+]
+
+[mods."sophisticated-storage"]
+configs = [
+  "config/sophisticatedstorage-client.toml",
+  "config/sophisticatedstorage-common.toml",
+  "config/sophisticatedstorage-server.toml",
+]
+
+[mods."sound-physics-remastered"]
+configless = true
+
+[mods."srdp"]
+configless = true
+
+[mods."storagedrawers"]
+configs = [
+  "config/storagedrawers-client.toml",
+  "config/storagedrawers-common.v2.toml",
+]
+
+[mods."supermartijn642s-config-lib"]
+configless = true
+
+[mods."supermartijn642s-core-lib"]
+configless = true
+
+[mods."tectonic"]
+configs = [
+  "config/tectonic.json",
+]
+
+[mods."terrablender"]
+configs = [
+  "config/terrablender.toml",
+]
+
+[mods."the-lost-cities"]
+configs = [
+  "config/lostcities-server.toml",
+]
+
+[mods."the-one-probe"]
+configs = [
+  "config/theoneprobe-client.toml",
+  "config/theoneprobe-common.toml",
+]
+
+[mods."theurgy"]
+configs = [
+  "config/theurgy-client.toml",
+  "config/theurgy-server.toml",
+]
+
+[mods."theurgy-kubejs"]
+configless = true
+
+[mods."trashslot"]
+configs = [
+  "config/trashslot-common.toml",
+]
+
+[mods."valhelsia-core"]
+configless = true
+
+[mods."waystones"]
+configs = [
+  "config/waystones-common.toml",
+]
+
+[mods."yungs-api"]
+configless = true
+
+[mods."yungs-better-dungeons"]
+configless = true
+
+[mods."yungs-better-jungle-temples"]
+configless = true
+
+[mods."yungs-better-mineshafts"]
+configless = true
+
+[mods."yungs-better-nether-fortresses"]
+configless = true
+
+[mods."yungs-better-ocean-monuments"]
+configless = true
+
+[mods."yungs-bridges"]
+configless = true
+
+[mods."yungs-cave-biomes"]
+configs = [
+  "config/yungscavebiomes-neoforge-26_1_1.toml",
+]
+
+[mods."yungs-extras"]
+configless = true
+
+[mods."yungs-menu-tweaks"]
+configs = [
+  "config/yungsmenutweaks-neoforge-26_1.toml",
+]
