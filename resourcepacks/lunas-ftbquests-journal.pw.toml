@@ -1,0 +1,13 @@
+name = "Luna's Journal - FTBQuests Addon"
+filename = "Luna'sQuestJournal.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "959e5147efb7ecb4dfcb258a03bac072040776c7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5654379
+project-id = 1087706
