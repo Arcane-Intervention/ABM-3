@@ -1,0 +1,13 @@
+name = "Applied Thaumaturge"
+filename = "appliedthaumaturge-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e6f9cb1d198e7fbdf6d065a5f64c937119c72683"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9090736
+project-id = 1718689

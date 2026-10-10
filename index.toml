@@ -900,6 +900,11 @@ hash = "0fb28b387b2bab9116e951990e2cab3750158574ec4427fe3decdbe7089f218c"
 metafile = true
 
 [[files]]
+file = "mods/applied-thaumaturge.pw.toml"
+hash = "b64d2663cea8c08acdadb9d362b051b0961ec886d17d879399d2784876bffa26"
+metafile = true
+
+[[files]]
 file = "mods/aquaculture-2-lava-fishing-addon.pw.toml"
 hash = "b5aa4d39b55c3b157195ce3cd4b5bed5f7afe6b05b29326681a6ff415c48b96d"
 metafile = true
@@ -981,7 +986,7 @@ metafile = true
 
 [[files]]
 file = "mods/curios.pw.toml"
-hash = "cea38c4ac448ca70289d122ab38d854fb1966a4d37b1d871cb1f2a4bdd09ef39"
+hash = "ecd3bcb6ee3c1bc2b4b9f28ff0808eb7ef38207a6a9796f7f722d2b1993235d8"
 metafile = true
 
 [[files]]
@@ -1171,7 +1176,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
-hash = "86ec12e0b7155a403ca0fe8de513713ecd42e94161249f1b46fff66e23aaf4d9"
+hash = "52eaf7266d5c1080fd8ab1ec5ebfbaa6310a054259db0f6d3647c4af15de54cb"
 metafile = true
 
 [[files]]
@@ -1417,6 +1422,11 @@ metafile = true
 [[files]]
 file = "mods/terrablender.pw.toml"
 hash = "435edf17484084adf2b3bc928b5995cb757d2e7c7a9ffc9e0bd16c114cd2b691"
+metafile = true
+
+[[files]]
+file = "mods/thaumaturge.pw.toml"
+hash = "d3cdcc01a9e9277ac0d80cefe8bc24fda8caebc668cfb206fd037cb999128290"
 metafile = true
 
 [[files]]
