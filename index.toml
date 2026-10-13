@@ -1160,6 +1160,11 @@ hash = "f5791c4d00478d0a84b555f0719524f469838107c321e7f923eece4f10637194"
 metafile = true
 
 [[files]]
+file = "mods/kubethaum.pw.toml"
+hash = "f837dbc14080e20a8e0f9c3f4d49524fe9ae81613557a9d2cf55a9ce2e286c71"
+metafile = true
+
+[[files]]
 file = "mods/lambdynamiclights.pw.toml"
 hash = "6a34c0b44a9f0a4ebbb04ae8af6cf86c2fce28353935226852d439c14e635f33"
 metafile = true
@@ -1427,6 +1432,11 @@ metafile = true
 [[files]]
 file = "mods/thaumaturge.pw.toml"
 hash = "d3cdcc01a9e9277ac0d80cefe8bc24fda8caebc668cfb206fd037cb999128290"
+metafile = true
+
+[[files]]
+file = "mods/thaumic-tracker.pw.toml"
+hash = "9ebecfbae1bbb5edb2c6889a3dc49732f48710c0f13bc0bf1b161bfa160524b2"
 metafile = true
 
 [[files]]

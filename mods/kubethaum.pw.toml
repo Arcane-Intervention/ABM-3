@@ -1,0 +1,13 @@
+name = "KubeThaum"
+filename = "kubethaum-26.1.2-1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "bd4feff212df46d959a3ca1828ff4f8e96a62809"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9144067
+project-id = 1736567
